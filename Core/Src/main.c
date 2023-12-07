@@ -71,7 +71,8 @@ void SystemClock_Config(void);
 
 u8 Flag_Stop=1,Flag_Show=0;                 //停止标志位和 显示标志位 默认停止 显示打开
 
-float Balance_Kp=300,Balance_Kd=0,Velocity_Kp=0,Velocity_Ki=0;//PID参数
+//float Balance_Kp=300,Balance_Kd=0.02,Velocity_Kp=50,Velocity_Ki=0.08;//PID参数
+float Balance_Kp=350,Balance_Kd=0,Velocity_Kp=30,Velocity_Ki=0.1;//PID参数
 
 int Moto1,Moto2,Final_Moto1,Final_Moto2;    //电机PWM变量 应是Motor的 向Moto致敬	
 int Zhongzhi,Flag_Zhongzhi=0;

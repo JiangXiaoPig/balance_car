@@ -110,7 +110,7 @@ void  Get_Zhongzhi(void)
 		 {
 		    if(myabs(Moto1)<100 && myabs(Moto2)<100)  		count++;		//采样
 				else			                        	count=0;	
-				if(count>300)  //连线3秒处于平衡位置，读取中值
+				if(count>100)  //连线3秒处于平衡位置，读取中值
 				{	
 				Zhongzhi=(int)Angle_Balance;	
 				Flag_Zhongzhi=1;
@@ -141,7 +141,10 @@ u8 Turn_Off(float angle)
     else
     {	
         temp=0;
-        EN=0;	
+        EN=0;
+        HAL_TIM_OC_Start_IT(&htim3,TIM_CHANNEL_1);
+        HAL_TIM_OC_Start_IT(&htim3,TIM_CHANNEL_2);
+
     }
     return temp;
 }

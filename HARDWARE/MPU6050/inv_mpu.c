@@ -3028,7 +3028,6 @@ u8 mpu_dmp_init(void)
 
         printf("mpu_set_sensor complete ......\r\n");
         if(temp[0]!=0x68)printf("faile   %d......\r\n",temp[0]);
-                    state=2;
 
 
     	if(!mpu_init())

@@ -93,7 +93,7 @@ int balance(float Angle ,float Gyro)
 {  
      float Bias;    //这里D为零
 	 int balancel;
-	 Bias=Angle-1;                          //===求出平衡的角度中值 和机械相关
+	 Bias=Angle+1;                          //===求出平衡的角度中值 和机械相关
 	 balancel=Balance_Kp*Bias+Balance_Kd*Gyro;      //===计算平衡控制的电机PWM 
 	 return balancel;
 }
